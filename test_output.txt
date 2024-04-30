@@ -1,0 +1,63 @@
+
+running 9 tests
+test block::test::create_block ... ok
+test block::test::mine_block ... ok
+test blockchain::test::verify_genesis_block ... ok
+test blockchain::test::verify_index_of_block ... ok
+test hashable::test::hash_data ... ok
+test utils::test::give_difficulty_back ... ok
+test blockchain::test::verify_difficult_of_block ... ok
+test blockchain::test::verify_hash_of_block ... ok
+test blockchain::test::verify_prev_hash_of_block ... ok
+
+successes:
+
+---- block::test::create_block stdout ----
+[src/block.rs:84] block = Block[0]: 3892de033466e8b4ee7f39ca7e8228c05d198f99656006184839df2c73ea1bc2 at: 1714480477466 with: Genesis block! nonce: 0
+
+---- block::test::mine_block stdout ----
+[src/block.rs:93] &block = Block[0]: d6675b5da1d02154b1d5df8967fa4bd66ca7ae74a9bae620628b033ddc1d2707 at: 1714480477468 with: Genesis! nonce: 0
+[src/block.rs:97] block = Block[0]: afa45deaa25eb66827baaf2fa92bce16738a492ed783513225fb36825ebd4a00 at: 1714480477468 with: Genesis! nonce: 36
+
+---- blockchain::test::verify_genesis_block stdout ----
+[src/blockchain.rs:11] &block = Block[0]: 30d964e190f5e7742b9661457145920f08f84c984edf70611e049231c2810000 at: 1714480477467 with: Genesis Block nonce: 55576
+
+---- blockchain::test::verify_index_of_block stdout ----
+[src/blockchain.rs:11] &block = Block[0]: 9662a753005f9838544fbe3f500cc302dfcc89d035ccb1916d6dde6884ba0000 at: 1714480477477 with: Genesis Block nonce: 22398
+[src/blockchain.rs:11] &block = Block[1]: 13890009ae67b35394048c9d4192a5f7c9390d8ba904aec273b92db947340000 at: 1714480477982 with: Another Block nonce: 10182
+[src/blockchain.rs:11] &block = Block[2]: 933e3351b6145faa3cd9115ba89caeb163deb9672bb023321a555ef27ce60000 at: 1714480478221 with: Another Block nonce: 76948
+[src/blockchain.rs:11] &block = Block[4]: 3b8f48fa6c3367a00acb6129214a86bccc9c28d62a6a1068af3f05cac0f40000 at: 1714480480186 with: Another Block nonce: 6405
+
+---- blockchain::test::verify_difficult_of_block stdout ----
+[src/blockchain.rs:11] &block = Block[0]: 30d964e190f5e7742b9661457145920f08f84c984edf70611e049231c2810000 at: 1714480477467 with: Genesis Block nonce: 55576
+[src/blockchain.rs:11] &block = Block[1]: 43338d58602e5f182da911042a3bc2a2c531792a7ae28dbeefd253c63d180000 at: 1714480478736 with: Another Block nonce: 46665
+[src/blockchain.rs:11] &block = Block[2]: 134cd07bcce288078b92f13592570bb58f59bcf2ab568c447d527fd2ad5f0000 at: 1714480480103 with: Another Block nonce: 19436
+[src/blockchain.rs:11] &block = Block[3]: 12c9c2aa78c9e4a090274e441b572ad758ce3b1d83cf448a9ae29eb19b060000 at: 1714480480581 with: Hello World nonce: 7350
+
+---- blockchain::test::verify_hash_of_block stdout ----
+[src/blockchain.rs:11] &block = Block[0]: 1287df796813562fd97762ac9d49cfe6e0e7d813003faa76f92bd7dd03900000 at: 1714480477469 with: Genesis Block nonce: 127441
+[src/blockchain.rs:11] &block = Block[1]: ab00d27c74bd78f60bef8f2535e2e3fda52304b2ca1107f10218f54957bc0000 at: 1714480480525 with: Another Block nonce: 10561
+[src/blockchain.rs:11] &block = Block[2]: 471ca6acecda24f369f62708214e2477f61f63c0404a55ca746f677e101c0000 at: 1714480480756 with: Another Block nonce: 41500
+[src/blockchain.rs:11] &block = Block[3]: f8f9e776cec458b8814612c5ae1fcf4bc392e9a667ac53069ceab7d49e970000 at: 1714480481661 with: Another Block nonce: 46475
+[src/blockchain.rs:11] &block = Block[4]: 7812e33a153bc5f784e4309a0102ecaf5fbaae85c957d1ca3ba7c0acfc3c0000 at: 1714480482679 with: Another Block nonce: 82664
+
+---- blockchain::test::verify_prev_hash_of_block stdout ----
+[src/blockchain.rs:11] &block = Block[0]: 44ee13417690109bd3760602c580ffc0cb55ddb296568cd332d2cef274330000 at: 1714480478766 with: Genesis Block nonce: 74719
+[src/blockchain.rs:11] &block = Block[1]: caaa556a393e1f44a16480127fdbba7ec8b0ff7a30c69d7c19c2603d571e0000 at: 1714480480547 with: Another Block nonce: 5771
+[src/blockchain.rs:11] &block = Block[2]: f69086b6e62c80e7319b059df69e4ca7c7a8f42c6e794fd7d15caf018c2d0000 at: 1714480480673 with: Another Block nonce: 165830
+[src/blockchain.rs:11] &block = Block[3]: 15400e79062e9fda600fbf6f6e8610b178e572ce77ba41ac3e1f050763210000 at: 1714480484355 with: Another Block nonce: 6024
+
+
+successes:
+    block::test::create_block
+    block::test::mine_block
+    blockchain::test::verify_difficult_of_block
+    blockchain::test::verify_genesis_block
+    blockchain::test::verify_hash_of_block
+    blockchain::test::verify_index_of_block
+    blockchain::test::verify_prev_hash_of_block
+    hashable::test::hash_data
+    utils::test::give_difficulty_back
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 17.86s
+

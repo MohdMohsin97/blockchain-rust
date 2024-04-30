@@ -58,7 +58,7 @@ impl Hashable for Block {
         bytes.extend(u128_bytes(&self.timestamp));
         bytes.extend(self.prev_block_hash);
         bytes.extend(u64_bytes(&self.nonce));
-        bytes.ends_with(self.payload.as_bytes());
+        bytes.extend(self.payload.as_bytes());
         bytes.extend(u128_bytes(&self.difficulty));
 
         bytes
@@ -86,7 +86,7 @@ mod test {
 
     #[test]
     fn mine_block() {
-        let mut  block = Block::new(0, now(), [0;32], 0,"Genesis block!".to_owned(), 0x00ffffffffffffffffffffffffffffff);
+        let mut  block = Block::new(0, now(), [0;32], 0,"Genesis!".to_owned(), 0x00ffffffffffffffffffffffffffffff);
 
         block.hash = block.hash();
        
