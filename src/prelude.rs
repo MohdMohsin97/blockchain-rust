@@ -1,8 +1,7 @@
 //! Crate prelude
 
-use std::{error::Error, rc::Rc};
+pub type Hash = [u8; 32];
 
-pub type Result<T> = core::result::Result<T, Box<dyn Error>>;
+pub type Address = String;
 
-pub type BlockHash = [u8; 32];
 

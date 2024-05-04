@@ -53,7 +53,7 @@ pub fn u128_bytes (u: &u128) -> [u8; 16] {
     ]
 }
 
-pub fn difficulty_bytes_as_u128 (v: &BlockHash) -> u128 {
+pub fn difficulty_bytes_as_u128 (v: &Hash) -> u128 {
     ((v[31] as u128) << 0xf * 8) |
     ((v[30] as u128) << 0xe * 8) |
     ((v[29] as u128) << 0xd * 8) |

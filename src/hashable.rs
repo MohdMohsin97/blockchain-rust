@@ -1,11 +1,11 @@
 use sha2::{Sha256, Digest };
 
-use crate::BlockHash;
+use crate::Hash;
 
 pub trait Hashable {
     fn bytes(&self) -> Vec<u8>;
 
-    fn hash (&self) -> BlockHash {
+    fn hash (&self) -> Hash {
         let mut hasher = Sha256::new();
         hasher.update(&self.bytes());
         let hash = hasher.finalize();
